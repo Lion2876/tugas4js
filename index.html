@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulasi Rangkaian Lampu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="judul">Simulasi Rangkaian Lampu</h1>
+
+<div class="container">
+    <h2 class="judul">Rangkaian 1</h2>
+
+    <div class="lamp-container">
+        <img id="r1-lamp1" src="lampoff.png" class="lamp">
+        <img id="r1-lamp2" src="lampoff.png" class="lamp">
+        <img id="r1-lamp3" src="lampoff.png" class="lamp">
+    </div>
+
+    <button onclick="toggleLamp('r1-lamp1')">Lampu 1</button>
+    <button onclick="toggleLamp('r1-lamp2')">Lampu 2</button>
+    <button onclick="toggleLamp('r1-lamp3')">Lampu 3</button>
+
+    <br><br>
+
+    <button onclick="toggleAll(['r1-lamp1','r1-lamp2','r1-lamp3'])">
+        Toggle Semua
+    </button>
+
+    <button onclick="turnOnAll(['r1-lamp1','r1-lamp2','r1-lamp3'])">
+        ON Semua
+    </button>
+
+    <button onclick="turnOffAll(['r1-lamp1','r1-lamp2','r1-lamp3'])">
+        OFF Semua
+    </button>
+
+<div class="on">
+    <img id="on1" src="on1.png" class="on-img">
+</div>
+</div>
+
+<div class="container">
+    <h2 class="judul">Rangkaian 2</h2>
+
+    <div class="lamp-container">
+        <img id="a" src="lampoff.png" class="lamp">
+        <img id="b" src="lampoff.png" class="lamp">
+        <img id="c" src="lampoff.png" class="lamp">
+        <img id="d" src="lampoff.png" class="lamp">
+    </div>
+
+    <button onclick="toggleLamp('a')">Lampu A</button>
+    <button onclick="toggleLamp('b')">Lampu B</button>
+    <button onclick="toggleLamp('c')">Lampu C</button>
+    <button onclick="toggleLamp('d')">Lampu D</button>
+
+    <br><br>
+
+    <button onclick="toggleAll(['a','b','c','d'])">
+        Toggle Semua
+    </button>
+
+    <button onclick="toggleGroup(['a','b'])">
+        Toggle A & B
+    </button>
+
+    <button onclick="toggleGroup(['c','d'])">
+        Toggle C & D
+    </button>
+
+    <br><br>
+
+    <button onclick="turnOnAll(['a','b','c','d'])">
+        ON Semua
+    </button>
+
+    <button onclick="turnOffAll(['a','b','c','d'])">
+        OFF Semua
+    </button>
+
+<div class="on">
+    <img id="on2" src="on2.png" class="on-img">
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

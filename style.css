@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin: 0;
+    padding: 20px;
+}
+
+.judul {
+    margin-bottom: 20px;
+    color: gold;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 30px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.lamp-container {
+    margin: 20px 0;
+}
+
+.lamp {
+    width: 120px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.lamp:hover {
+    transform: scale(1.1);
+}
+
+.button-group {
+    margin: 10px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.on {
+    margin-top: 20px;
+}
+
+.on-img {
+    width: 200px;
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+    position: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid gold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+}
