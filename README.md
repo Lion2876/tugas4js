@@ -1,1 +1,12 @@
 # tugas4js
+Berbeda dengan contoh dasar yang hanya menyalakan dan mematikan gambar secara statis, pada program ini saya membangun simulasi rangkaian lampu yang lebih interaktif menggunakan HTML, CSS, dan JavaScript terpisah. Struktur kodenya saya buat modular agar logika tidak bercampur dengan tampilan. HTML hanya bertugas sebagai kerangka dan tombol interaksi, CSS menangani desain visual, sedangkan seluruh logika kontrol lampu saya letakkan di file JavaScript.
+
+Pada bagian struktur, saya membuat dua sistem rangkaian yang berbeda. Rangkaian pertama terdiri dari 3 lampu dengan kontrol individu, toggle semua, serta tombol paksa ON dan OFF. Rangkaian kedua lebih kompleks karena memiliki 4 lampu (a, b, c, d), dengan tambahan fitur toggle per grup (A & B, serta C & D). Artinya, tidak hanya kontrol satuan dan global, tetapi juga kontrol parsial dalam satu sistem.
+
+Bagian yang paling saya perhatikan adalah pengelolaan status lampu. Setiap perubahan kondisi lampu selalu memanggil fungsi updateStatus(). Fungsi ini bertugas mengecek apakah semua lampu dalam satu rangkaian sedang menyala menggunakan fungsi checkAllOn(). Jika seluruh lampu dalam satu rangkaian ON, maka gambar onn akan muncul. Namun jika ada satu saja yang OFF, gambar tersebut otomatis menghilang. Dengan cara ini, sistem menjadi dinamis dan responsif terhadap setiap perubahan kondisi.
+
+Untuk logika penggantian lampu, saya menggunakan pengecekan lamp.src.includes("lampoff.png") sebagai indikator kondisi. Jika sumber gambar menunjukkan lampu mati, maka akan diganti menjadi lampu menyala, dan sebaliknya. Meskipun pendekatan ini sederhana, metode ini efektif untuk simulasi berbasis gambar dan mudah dipahami dalam tahap pembelajaran JavaScript dasar.
+
+Dari sisi tampilan, saya menggunakan background gelap dengan efek transparansi pada container agar terlihat modern. Efek hover pada lampu membuat tampilan lebih hidup, dan animasi @keyframes fadeIn digunakan untuk memberikan efek muncul yang halus pada gambar onn ketika semua lampu menyala. Saya juga menambahkan efek bayangan dan transisi pada tombol agar interaksi terasa lebih responsif.
+
+Secara keseluruhan, program ini bukan sekadar simulasi lampu ON/OFF biasa, tetapi sudah memiliki struktur terpisah (HTML, CSS, JS), sistem kontrol multi-level (individu, grup, global), serta validasi kondisi menyeluruh sebelum menampilkan gambar onn. Program ini menunjukkan pemahaman dasar tentang manipulasi DOM, pengelolaan state sederhana, serta desain antarmuka yang lebih menarik dibandingkan implementasi paling dasar.
